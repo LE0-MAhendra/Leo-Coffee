@@ -1,0 +1,24 @@
+{% extends 'base.html'%}
+{% block head %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/auth.css') }}">
+{% endblock %}
+
+{% block content%}
+<div class="container">
+    <form action="/signup" method="POST" autocomplete="off">
+        <h2 class="titles" style="color:chocolate">Update</h2>
+        <div class="form-class">
+            <div class="input-boxes">
+                <input type="text" name="name" placeholder="username">
+                <input type="email" name="email" placeholder="Email">
+                <input type="password" name="password" placeholder="Password">
+                <input type="submit" value="Signup">
+            </div>
+            <div class="options">
+                <a class="text" href="#">Existing User</a>
+                <a class="btn" href="{{ url_for('login') }}">Login</a>
+            </div>
+        </div>
+    </form>
+</div>
+{% endblock %}

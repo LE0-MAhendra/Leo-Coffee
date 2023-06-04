@@ -1,0 +1,16 @@
+[tool.poetry]
+name = "cofee site flask"
+version = "0.1.0"
+description = "cofee website made with flask"
+authors = ["LE0-MAhendra <134285915+LE0-MAhendra@users.noreply.github.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.11"
+flask = "^2.3.2"
+sqlalchemy = "^2.0.15"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

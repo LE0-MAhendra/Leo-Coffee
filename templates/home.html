@@ -1,0 +1,21 @@
+{% extends 'base.html'%}
+{% block head %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/home.css') }}">
+{% endblock %}
+
+{% block content%}
+<div class="container">
+    <nav>
+        <h1>Coffee..🍵</h1>
+    </nav>
+    <div class="content">
+        <div class="text">
+            <p>How far behind would technology be, if no one ever discovered coffee?</p>
+        </div>
+        <div class="btn">
+            <a href="{{ url_for('signup') }}">SignUp</a>
+            <a href="{{ url_for('login') }}">Login</a>
+        </div>
+    </div>
+</div>
+{% endblock %}
