@@ -1,0 +1,14 @@
+{
+    "builds": [
+        {
+            "src": "main.py",
+            "use": "@versel/python"
+        }
+    ],
+    "routes": [
+        {
+            "src": "/(.*)",
+            "dest": "/"
+        }
+    ]
+}
