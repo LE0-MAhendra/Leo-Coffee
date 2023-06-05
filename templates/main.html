@@ -6,27 +6,61 @@
 {% block content%}
 <section class="container">
     <nav>
-        <h1>Coffee..🍵</h1>
+        <div>
+            <h1>Coffee..🍵</h1>
+        </div>
+        <div class="side">
+            <h3>{{name}}</h3>
+            <a href="/logout">Logout</a>
+        </div>
     </nav>
     <div class="content">
         <div class="text">
-            <p>How far behind would technology be, if no one ever discovered coffee?</p>
-        </div>
-        <div class="btn">
-            <a href="{{ url_for('signup') }}">SignUp</a>
-            <a href="{{ url_for('login') }}">Login</a>
+            <p>Welcome to Cofee..😁 Locator</p>
+
         </div>
     </div>
 </section>
-<section>
-    <div></div>
+<div class="add">
+    <a class="addbtn" href="{{url_for('add')}}">👉 Add a Cafe / Shop</a>
+</div>
+<section class="cafessec">
     {% for row in data %}
     <div class="card">
         <div class="image">
-            <img src="{{row[2]}}" alt="">
+            <img src="{{row[3]}}" alt="">
         </div>
-        <div class="content">
-
+        <div class="heading">
+            <h2>{{row[1]}}</h2>
+        </div>
+        <div class="cardcontent">
+            <div class="loc">
+                <h2>{{row[4]}}</h2>
+                <a href="{{row[2]}}"><i class='bx bxs-navigation'></i></a>
+            </div>
+            <div class="price">
+                <h2>Price</h2>
+                <h2><i class='bx bx-money-withdraw'></i> {{row[10]}}</h2>
+            </div>
+            <div class="options">
+                {% if row[5] == 1 %}
+                <i class='bx bxs-battery-charging'></i>
+                {% endif %}
+                {% if row[6] == 1 %}
+                <i class='bx bx-male-female'></i>
+                {% endif %}
+                {% if row[7] == 1 %}
+                <i class='bx bx-wifi'></i>
+                {% endif %}
+                {% if row[8] == 1 %}
+                <i class='bx bxs-phone'></i>
+                {% endif %}
+                <i class='bx bx-chair'>{{ row[9] }}</i>
+            </div>
+            <div class="btns">
+                <a href="/update/{{row[0]}}">Update</a>
+                <a href="/delete/{{row[0]}}">Delete</a>
+            </div>
         </div>
     </div>
     {% endfor %}

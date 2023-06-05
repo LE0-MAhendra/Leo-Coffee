@@ -1,0 +1,42 @@
+{% extends 'base.html'%}
+{% block head %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/adup.css') }}">
+{% endblock %}
+
+{% block content%}
+<div class="container">
+    <form action="/add" method="POST" autocomplete="off">
+        <div class="form-class">
+            <h2 class="titles">Add a Cafe</h2>
+            <div class="input-boxes">
+                <input type="text" name="name" placeholder="Cafe Name">
+                <input type="url" name="map_url" placeholder="Google Location">
+                <input type="url" name="img_url" placeholder="Image Adress">
+                <input type="text" name="location" placeholder="City">
+                <div class="boxes">
+                    <div class="checkboxes">
+                        <h4>sockets</h4>
+                        <input type="checkbox" name="has_sockets">
+                    </div>
+                    <div class="checkboxes">
+                        <h4>toilets</h4>
+                        <input type="checkbox" name="has_toilet">
+                    </div>
+                    <div class="checkboxes">
+                        <h4>wifi</h4>
+                        <input type="checkbox" name="has_wifi">
+                    </div>
+                    <div class="checkboxes">
+                        <h4>Calls</h4>
+                        <input type="checkbox" name="can_take_calls">
+                    </div>
+                </div>
+                <input type="text" name="seats" placeholder="No of Seats">
+                <input type="text" name="coffee_price" placeholder="Coffee Price">
+
+                <input type="submit" value="Add">
+            </div>
+        </div>
+    </form>
+</div>
+{% endblock %}

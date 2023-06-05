@@ -1,0 +1,42 @@
+{% extends 'base.html'%}
+{% block head %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/adup.css') }}">
+{% endblock %}
+
+{% block content%}
+<div class="container">
+    <form action="/updatedb/{{row[0]}}" method="POST" autocomplete="off">
+        <div class="form-class">
+            <h2 class="titles">Update</h2>
+            <div class="input-boxes">
+                <input type="text" name="name" value="{{row[1]}}">
+                <input type="url" name="map_url" value="{{row[2]}}">
+                <input type="url" name="img_url" value="{{row[3]}}">
+                <input type="text" name="location" value="{{row[4]}}">
+                <div class="boxes">
+                    <div class="checkboxes">
+                        <h4>sockets</h4>
+                        <input type="checkbox" name="has_sockets" value="true" {% if row[5]==1 %}checked{% endif %}>
+                    </div>
+                    <div class="checkboxes">
+                        <h4>toilets</h4>
+                        <input type="checkbox" name="has_toilet" value="true" {% if row[6]==1 %}checked{% endif %}>
+                    </div>
+                    <div class="checkboxes">
+                        <h4>wifi</h4>
+                        <input type="checkbox" name="has_wifi" value="true" {% if row[7]==1 %}checked{% endif %}>
+                    </div>
+                    <div class="checkboxes">
+                        <h4>Calls</h4>
+                        <input type="checkbox" name="can_take_calls" value="true" {% if row[8]==1 %}checked{% endif %}>
+                    </div>
+                </div>
+                <input type="text" name="seats" value="{{row[9]}}">
+                <input type="text" name="coffee_price" value="{{row[10]}}">
+
+                <input type="submit" value="update">
+            </div>
+        </div>
+    </form>
+</div>
+{% endblock %}

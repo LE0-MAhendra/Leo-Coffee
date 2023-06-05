@@ -12,5 +12,188 @@ html {
 
 body {
     box-sizing: border-box;
+    background-color: aquamarine;
     margin: 0;
+}
+
+h2 {
+    margin: 5px;
+}
+
+.container {
+    height: 100vh;
+    width: 100vw;
+    background: url("https://images.pexels.com/photos/2159074/pexels-photo-2159074.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
+    background-size: cover;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    color: white;
+    font-size: 2rem;
+}
+
+.side {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.side a {
+    text-decoration: none;
+    margin-left: 10px;
+    color: #00C4FF;
+}
+
+.content {
+    height: 50vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.text {
+    color: #00C4FF;
+    font-size: 4rem;
+    font-weight: bold;
+    animation: fadeIn 5s;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+.add {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.addbtn {
+    text-decoration: none;
+    font-size: 1.5rem;
+    color: darkorange;
+    margin: 20px auto;
+    background-color: #0079FF;
+    padding: 10px 20px;
+    border-radius: 10px;
+    transition: .2s ease-in-out 0s;
+}
+
+.addbtn:hover {
+    transform: scale(1.2);
+}
+
+.cafessec {
+    width: 90%;
+    height: auto;
+    display: flex;
+    margin: auto;
+    flex-wrap: wrap;
+}
+
+.card {
+    width: 20%;
+    margin: 10px 30px;
+    background-color: darkgrey;
+    border-radius: 10px;
+}
+
+.image img {
+    height: 200px;
+    width: 100%;
+    margin: 0 auto;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+
+.heading {
+    height: 4rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin: auto 5px;
+    color: #025464;
+}
+
+.heading h2 {
+    font-size: 1.2rem;
+    margin: 0;
+}
+
+.cardcontent {
+    margin: 0 15px;
+    padding: 0;
+}
+
+.loc {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.loc h2 {
+
+    font-size: 1.2rem;
+}
+
+.loc a {
+    text-decoration: none;
+    font-size: 1.6rem;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+}
+
+.price {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.price h2 {
+    font-size: 1.2rem;
+}
+
+
+.price i {
+    text-decoration: none;
+    font-size: 1.6rem;
+}
+
+.options {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    background-color: bisque;
+    margin: 8px;
+    padding: 10px 20px;
+    border-radius: 10px;
+}
+
+.btns {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+}
+
+.btns a {
+    text-decoration: none;
+    color: white;
+    background-color: #0079FF;
+    margin: 8px;
+    padding: 8px 20px;
+    border-radius: 10px;
 }
