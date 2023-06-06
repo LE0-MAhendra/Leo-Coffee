@@ -4,9 +4,19 @@
 {% endblock %}
 
 {% block content%}
+
 <div class="container">
     <form action="/login" method="POST" autocomplete="off">
         <h2 class="titles" style="color:chocolate">Login</h2>
+        <div class="mess">
+            {% with messages = get_flashed_messages(with_categories=true) %}
+            {% if messages %}
+            {% for category,message in messages %}
+            <div class="alert alert-{{category}}">{{message}}</div>
+            {% endfor %}
+            {% endif %}
+            {% endwith %}
+        </div>
         <div class="form-class">
             <div class="input-boxes">
                 <input type="text" name="name" placeholder="username">
